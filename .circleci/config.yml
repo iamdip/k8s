@@ -3,7 +3,7 @@ jobs:
  build:
    machine: true
    steps:
-     - commands
+     - checkout
      - run:
          name: "build image"
          command: sh ./deploy.sh
