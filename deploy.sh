@@ -5,6 +5,7 @@ docker build -t cygnetops/multi-worker-k8s:latest -t 'dipakoo7/multi-worker-k8s'
 docker push dipakoo7/multi-client-k8s:latest
 docker push dipakoo7/multi-server-k8s-pgfix:latest
 docker push dipakoo7/multi-worker-k8s:latest
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 docker push dipakoo7/multi-client-k8s
 docker push dipakoo7/multi-server-k8s-pgfix
